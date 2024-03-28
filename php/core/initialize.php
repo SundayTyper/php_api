@@ -1,13 +1,11 @@
 <?php
 
-defined('DS') ? null : feine('DS', DIRECTORY_SEPARATOR);
-defined('SITE_ROOT') ? null : define('SITE_ROOT', DS.'php');
+defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
+defined('SITE_ROOT') ? null : define('SITE_ROOT', DS . 'var/www/html');
 
-defined('INC_PATH') ? null : define('INC_PATH', SITEROOT.DS.'includes');
-defined('INC_PATH') ? null : define('INC_PATH', SITEROOT.DS.'core');
+defined('INC_PATH') ? null : define('INC_PATH', SITE_ROOT . DS . 'includes');
+defined('CORE_PATH') ? null : define('CORE_PATH', SITE_ROOT . DS . 'core');
 
 // load config file
-require_once(INC_PATH.DS.'config.php');
-
-
-?>
+require_once(INC_PATH . DS . 'config.php');
+require_once(CORE_PATH . DS . 'post.php');
